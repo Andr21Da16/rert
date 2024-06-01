@@ -1,0 +1,190 @@
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container,
+.content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.heart-animation {
+    width: 100px;
+    height: 90px;
+    background-color: #ff6b81;
+    position: relative;
+    margin: 0 auto 20px;
+    transform: rotate(-45deg);
+    animation: heartbeat 1.5s infinite;
+}
+
+.heart-animation::before,
+.heart-animation::after {
+    content: "";
+    width: 100px;
+    height: 90px;
+    background-color: #ff6b81;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart-animation::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart-animation::after {
+    top: 0;
+    left: 50px;
+}
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-45deg);
+    }
+}
+
+h1,
+h2 {
+    color: #ff6b81;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    animation: fadeIn 2s;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    background: white;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #ff6b81;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    background-color: #ff6b81;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    animation: fadeIn 2s;
+}
+
+button:hover {
+    background-color: #ff4757;
+}
+
+.next-button {
+    display: block;
+    margin: 20px auto;
+}
+
+#response-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ff6b81;
+    animation: fadeIn 2s;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ff6b81;
+}
+
+.message,
+.question {
+    display: none;
+}
+
+.message.active,
+.question.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-container,
+    .content {
+        padding: 20px;
+    }
+    input {
+        padding: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .next-button {
+        margin: 15px auto;
+    }
+}

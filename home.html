@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ayelen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background">
+        <div class="content">
+            <div class="heart-animation"></div>
+            <h1>¡Hola Ayelen!</h1>
+
+            <!-- Formulario de inicio de sesión -->
+            <form id="loginForm">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Iniciar sesión</button>
+                <p id="error-message" style="color: red;"></p>
+            </form>
+
+            <div id="messages-container" style="display: none;">
+                <div class="message" id="message-1">
+                    <p>Esta resfriadita</p>
+                    <button class="next-btn" data-message="1">Siguiente</button>
+                </div>
+                <div class="message" id="message-2">
+                    <p>Hay que matar al resfrío por meterse con ud</p>
+                    <button class="next-btn" data-message="2">Siguiente</button>
+                </div>
+                <div class="message" id="message-3">
+                    <p>Mejoraaa</p>
+                    <button class="next-btn" data-message="3">Siguiente</button>
+                </div>
+                <div class="message" id="message-4">
+                    <p>Sobrevive te necesito</p>
+                    <button class="next-btn" data-message="4">Siguiente</button>
+                </div>
+                <button id="next-section" style="display: none;">Pasar a las preguntas</button>
+            </div>
+
+            <div id="questions-container" style="display: none;">
+                <h2>Mis preguntas de inicio de mes</h2>
+                <div class="question" id="question-1" style="display: none;">
+                    <p>¿Quieres estar conmigo?</p>
+                    <button class="question-btn" data-answer="yes" data-question="1">Sí</button>
+                    <button class="question-btn" data-answer="no" data-question="1">No</button>
+                    <button class="next-btn" data-question="1" style="display: none;">Siguiente</button>
+                </div>
+                <div class="question" id="question-2">
+                    <p>¿Aún te gusto?</p>
+                    <button class="question-btn" data-answer="yes" data-question="2">Sí</button>
+                    <button class="question-btn" data-answer="no" data-question="2">No</button>
+                    <button class="next-btn" data-question="2" style="display: none;">Siguiente</button>
+                </div>
+                <div class="question" id="question-3">
+                    <p>¿Crees que estás enamorada para mantener esto?</p>
+                    <button class="question-btn" data-answer="yes" data-question="3">Sí</button>
+                    <button class="question-btn" data-answer="no" data-question="3">No</button>
+                    <button class="next-btn" data-question="3" style="display: none;">Siguiente</button>
+                </div>
+                <div class="question" id="question-4">
+                    <p>¿Quieres hacerlo?</p>
+                    <button class="question-btn" data-answer="yes" data-question="4">Sí</button>
+                    <button class="question-btn" data-answer="no" data-question="4">No</button>
+                    <button class="next-btn" data-question="4" style="display: none;">Siguiente</button>
+                </div>
+                <div id="response-message" style="display: none;">¡Gracias por responder!</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
